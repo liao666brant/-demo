@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-<!--    <p>新冠肺炎疫情实时数据接口API和开源项目</p>-->
-<!--    <div id="nav">-->
-<!--      <router-link to="/">Home</router-link> |-->
-<!--      <router-link to="/about">About</router-link>-->
-<!--    </div>-->
     <router-view></router-view>
   </div>
 </template>
