@@ -8,7 +8,7 @@
 <script>
 //import echarts from 'echarts'
 import * as echarts from "echarts";
-import { geoJson, geoCoordMap1 } from "../../assets/js/WorldMap";
+import {geoJson, geoCoordMap1} from "../../assets/js/WorldMap";
 export default {
   name: "WorldMap",
   data() {
@@ -36,7 +36,6 @@ export default {
         });
     },
     drawChart() {
-      //this.axios.get("http://localhost:8080/res/test.json").then((res) => {
       this.axios
         .get("http://110.42.237.123:8080/CovidData/world_data")
         .then((res) => {
@@ -166,7 +165,6 @@ export default {
               label: {
                 normal: {
                   show: false,
-                  
                 },
                 emphasis: {
                   show: false,
@@ -192,7 +190,6 @@ export default {
                     formatter: "{b}",
                     position: "right",
                     show: true, //是否显示地名
-
                   },
                   emphasis: {
                     show: true,

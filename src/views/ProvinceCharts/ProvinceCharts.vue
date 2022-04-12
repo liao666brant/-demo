@@ -2,9 +2,11 @@
   <div class="ProvinceCharts">
     <div class="title">
       <!-- <span style="color:#393939;">·</span> -->
-      {{province }}
+      {{ province }}
     </div>
-    <span class="back" @click="backFun"><i class="el-icon-back"> 返回</i> </span>
+    <span class="back" @click="backFun"
+      ><i class="el-icon-back"> 返回</i>
+    </span>
     <div class="main">
       <div class="top_left"><TopLeft></TopLeft></div>
       <div class="top_right"><TopRight></TopRight></div>
@@ -32,9 +34,7 @@ export default {
     };
   },
 
-
   created() {
-    //this.axios.get("http://localhost:8080/res/test.json").then((res) => {
     this.axios
       .get("http://110.42.237.123:8080/CovidData/province_data")
       .then((res) => {
@@ -47,8 +47,7 @@ export default {
         }
       });
   },
-  mounted() {
-  },
+  mounted() {},
   watch: {
     $route() {
       this.province = this.$route.query.province;
@@ -61,15 +60,15 @@ export default {
     BottomRight,
   },
   methods: {
-    backFun(){
+    backFun() {
       this.$router.push("/ChinaMap");
-    }
+    },
   },
 };
 </script>
 
 <style>
-.back{
+.back {
   position: absolute;
   left: 2%;
   top: 2%;
@@ -77,7 +76,7 @@ export default {
   font-size: 120%;
   cursor: pointer;
 }
-.back :hover{
+.back :hover {
   color: orange;
   transition: 0.4s;
 }
@@ -85,7 +84,7 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-   background-image: linear-gradient(180deg, #72a2dd 0%, #b3b3b3 100%);
+  background-image: linear-gradient(180deg, #72a2dd 0%, #b3b3b3 100%);
 }
 .title {
   position: relative;
@@ -95,7 +94,7 @@ export default {
   font-size: 200%;
   color: white;
   font-weight: 1000;
-  letter-spacing:10px;
+  letter-spacing: 10px;
   margin-left: 2%;
 }
 .main {

@@ -53,8 +53,6 @@ export default {
         ["南海诸岛", "http://110.42.237.123:8080/Data/search_hainan_data"],
       ]);
       var urlname = hashMap.get(this.$route.query.province);
-      // this.axios.get("http://localhost:8080/res/test.json").then((res) => {
-      //this.axios.get("http://110.42.237.123:8080/CovidData/province_data").then((res) => {
       this.axios.get(urlname).then((res) => {
         var all = res.data;
         if (all.length != 1) {
@@ -174,7 +172,7 @@ export default {
         };
         myChart.on("highlight", function (params) {
           const itemData = data[params.dataIndex - 1];
-          const { name, value } = itemData;
+          const {name, value} = itemData;
           myChart.setOption({
             graphic: {
               elements: [
