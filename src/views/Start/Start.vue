@@ -1,24 +1,24 @@
 <template>
   <div class="start">
-    <vue-particles color="#F6676A"
-                   :particleOpacity="0.7"
-                   :particlesNumber="70"
-                   shapeType="circle"
-                   :particleSize="6"
-                   linesColor="#858585"
-                   :linesWidth="1.5"
-                   :lineLinked="true"
-                   :lineOpacity="0.4"
-                   :linesDistance="150"
-                   :moveSpeed="3"
-                   :hoverEffect="true"
-                   hoverMode="grab"
-                   :clickEffect="true"
-                   clickMode="push"></vue-particles>
-    <div class="wrapper"
-         @click="changeV">
+    <vue-particles
+      color="#F6676A"
+      :particleOpacity="0.7"
+      :particlesNumber="70"
+      shapeType="circle"
+      :particleSize="6"
+      linesColor="#858585"
+      :linesWidth="1.5"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :moveSpeed="3"
+      :hoverEffect="true"
+      hoverMode="grab"
+      :clickEffect="true"
+      clickMode="push"
+    ></vue-particles>
+    <div class="wrapper" @click="changeV">
       <span class="btn">进入网站</span>
-
     </div>
   </div>
 </template>
@@ -26,17 +26,17 @@
 <script>
 export default {
   name: "Start",
-  data () {
+  data() {
     return {
-      particularColor: ''
-    }
+      particularColor: "",
+    };
   },
   methods: {
-    changeV () {
+    changeV() {
       this.$router.push("/Home");
     },
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
